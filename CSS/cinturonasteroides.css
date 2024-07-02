@@ -1,0 +1,105 @@
+/* Video de fondo */
+video {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* Letra para títulos */
+@font-face {
+  font-family: "Designer";
+  src: url("DESIGNER.otf");
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 400px;
+  background-color: black;
+  color: white;
+}
+
+.card h1, .card h2 {
+  color: white;
+  font-family: "Designer", sans-serif;
+  font-size: 2em;
+  background-color: #905af7;
+  padding: 10px;
+  border-radius: 5px;
+  
+}
+
+.card ul {
+  list-style-type: none;
+  padding: 0;
+  
+}
+
+.card li {
+  margin: 10px 0;
+  
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Animación del logo */
+.avatar {
+  margin-top: 20px;
+  width: 150px; /* Ajusta el tamaño del logo */
+  transform: translateY(0px);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px); /* Mueve el elemento hacia arriba */
+  }
+  100% {
+    transform: translateY(0px); /* Vuelve a la posición inicial */
+  }
+}
+
+header {
+  position: relative;
+  z-index: 1;
+}
+
+button.btn.btn-secondary {
+  z-index: 2;
+}
+footer{
+
+  text-align: center;
+}

@@ -1,0 +1,97 @@
+/* Estilos para el video de fondo */
+video {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* Fuente para títulos */
+@font-face {
+  font-family: "Designer";
+  src: url("DESIGNER.otf");
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 400px;
+  color: white;
+}
+
+.card h1, .card h2 {
+  color: white;
+}
+
+.card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.card li {
+  margin: 10px 0;
+}
+
+
+/* Estilos para el botón */
+button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+/* Estilos para los enlaces */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilos para la imagen */
+.avatar {
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+}
+
+/* Animación para la imagen */
+.avatar {
+  margin-top: 20px;
+  transform: translateY(0px);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px); /* Mueve el elemento hacia arriba */
+  }
+  100% {
+    transform: translateY(0px); /* Vuelve a la posición inicial */
+  }
+}
+
+/* Estilos para el footer */
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  text-align: center;
+  color: white;
+}

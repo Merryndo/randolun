@@ -1,0 +1,317 @@
+body {
+  transition: all .3s;
+ 
+}
+/*empieza animacion avatar*/
+.avatar {
+  
+  margin-top: 20px; border-radius: 50%; /* Hace que el cuadro sea un círculo */
+  transform: translateY(0px);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+      transform: translateY(0px);
+  }
+  50% {
+      transform: translateY(-20px); /* Mueve el elemento hacia arriba */
+  }
+  100% {
+      transform: translateY(0px); /* Vuelve a la posición inicial */
+  }
+}
+/*termina animacion avatar*/
+  @font-face {
+    font-family: "Designer";
+    src: url("DESIGNER.otf");
+  }
+  video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  size: cover;
+  object-fit: cover;
+ 
+  }
+  h1, h2{
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+    font-family: "Designer";
+  }
+  h2{
+    margin-bottom: 70px;
+  }
+  .contenedor {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .columna {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;/
+  
+  }
+  
+  .columna a {
+    margin: 10px;
+    flex-direction: row;
+    position:relative; /* Añade posición relativa para elementos a */
+    display:inline-flex; /* Hace que los elementos a se comporten como bloques en línea */
+  }
+  
+
+.columna a:hover img {
+  transform: scale(10.10); /* Escalar la imagen al 110% del tamaño original al pasar el ratón */
+}
+.columna a::after {
+  content: attr(data-name); /* Muestra el atributo data-name como texto */
+  position: absolute;
+  top: 100%; /* Coloca el título en la mitad superior del elemento padre */
+  left: 100%; /* Coloca el título a la derecha del elemento padre */
+  transform: translateY(-50%); /* Centra verticalmente el título */
+  background-color: rgba(245, 240, 240, 0.8); /* Fondo semitransparente */
+  padding: 10px 20px; /* Añade espacio alrededor del texto */
+  border-radius: 10px; /* Redondea las esquinas */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  font-size: 18px; /* Tamaño del texto */
+  opacity: 0; /* Oculta el título por defecto */
+  transition: opacity 0.3s; /* Añade una transición suave */
+}
+
+.columna a:hover::after {
+  opacity: 1; /* Muestra el título al pasar el ratón por encima */
+}
+.columna a img {
+  width: 230px; /* Tamaño del Sol */
+  height: 130px;
+  object-fit: contain; /* Ajustar la imagen para mostrarla completa */
+  transition: transform 0.3s; /* Añadir una transición suave */
+}
+
+.columna a:nth-child(2) img {
+    width: 50px; /* Tamaño de Mercurio */
+    height: 50px;
+}
+
+.columna a:nth-child(3) img {
+    width: 78px; /* Tamaño de Venus */
+    height: 78px;
+}
+.columna a:nth-child(4) img {
+  width: 70px; /* Tamaño de Tierra */
+  height: 70px;
+}
+.columna a:nth-child(5) img {
+  width: 40.8px; /* Tamaño de Luna */
+  height: 40.8px;
+}
+.columna a:nth-child(6) img {
+  width: 58px; /* Tamaño de Marte */
+  height: 58px;
+}
+.columna a:nth-child(7) img {
+  width: 70px; /* Tamaño de Asteroides */
+  height: 70px;
+}
+.columna a:nth-child(8) img {
+  width: 170px; /* Tamaño de jupiter */
+  height: 170px;
+ 
+}
+.columna a:nth-child(9) img {
+  width: 150px; /* Tamaño de Saturno */
+  height: 150px;
+  
+}
+.columna a:nth-child(10) img {
+  width: 60px; /* Tamaño de Cometa */
+  height: 60px;
+  
+  
+}
+.columna a:nth-child(11) img {
+  width: 90px; /* Tamaño de Urano */
+  height: 90px;
+}
+
+.columna a:nth-child(12) img {
+  width: 86px; /* Tamaño de Neptuno */
+  height: 86px;
+}
+.columna a:nth-child(13) img {
+  width: 40px; /* Tamaño de Pluton */
+  height: 40px;
+}
+img{
+  width: 200px;
+  height: 150px;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Continúa ajustando los tamaños de los demás planetas según las proporciones proporcionadas */
+/*musica empieza aqui*/
+.reproductor{
+  position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+
+/*musica termina aqui*/
+/*Botones empieza aqui*/
+
+
+button {
+  font-size: 25px;
+  width: 8em;
+  height: 2em;
+  color: orange;
+  border-left: 0.08em solid;
+  position: relative;
+  margin-top: 0.8em;
+  cursor: pointer;
+}
+
+button::before,
+button::after
+{
+  content: '';
+  position: absolute;
+  width: inherit;
+  border-left: inherit;
+  z-index: -1;
+}
+
+button::before {
+  height: 80%;
+  top: 10%;
+  left: calc(-0.15em - 0.08em * 2);
+  filter: brightness(0.8);
+}
+
+button::after {
+  height: 60%;
+  top: 20%;
+  left: calc(-0.15em * 2 - 0.08em * 3);
+  filter: brightness(0.6);
+}
+
+button span {
+  position: relative;
+  height: 120%;
+  top: -10%;
+  box-sizing: border-box;
+  border: 0.08em solid;
+  background-color: #dfd2d2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  transform: translateX(calc(-0.15em * 3 - 0.08em * 2));
+  transition: 0.3s;
+}
+
+button:hover span {
+  transform: translateX(0.15em);
+}
+/*botones acaba aqui*/
+/*Transicion empieza aqui*/
+.loading{
+  opacity: 0;
+} /*no va la transicion*/
+/*para la letra*/
+@font-face {
+  font-family: "Designer";
+  src: url("DESIGNER.otf");
+}
+h1, h2{
+  text-align: center;
+  margin-bottom: 50px;
+  color: white;
+  font-family: "Designer";
+  
+}
+.copyright{
+  color: white;
+  bottom: 0;
+  text-align: center;
+  margin-top: 300px;
+}
+/*aqui empieza la imagen que movemos*/
+.player {
+  position: absolute;
+  display: block;
+  transition: all .2s ease-in-out;
+  width: 50px;
+  height: 50px;
+}
+
+#contNave {
+  position: relative;
+  overflow: hidden; /*nos asegura que el player no se sale del contenedor*/
+}
+h3{
+  text-align: center;
+  color: white;
+  font-family: "Designer";
+}
+h3{
+  color: white; /* Color del texto */
+  text-shadow: 
+      0 0 10px #8a2be2, /* Lila */
+      0 0 20px #ff69b4, /* Rosa */
+      0 0 30px #00ff00, /* Verde */
+      0 0 40px #ff69b4, /* Rosa */
+      0 0 50px #8a2be2; /* Lila */
+}
+/*ocultar nave en dispositivos mvl*/
+@media only screen and (max-width: 768px) {
+  .contNave {
+    display: none;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .contNave {
+    display: none;
+  }
+}
+/*hacer la pag responsive*/
+@media only screen and (max-width: 1200px) {
+  /* Estilos para pantalla grande */
+  .contenedor {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  /* Estilos para pantalla mediana */
+  .contenedor {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Estilos para pantalla pequeña */
+  .contenedor {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Estilos para pantalla muy pequeña */
+  .contenedor {
+    width: 60%;
+  }
+}

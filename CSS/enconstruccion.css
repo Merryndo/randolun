@@ -1,0 +1,94 @@
+/* hacer una pagina web que sea en construccion con una barra de carga de cuanto porcentaje hay hecho de la pagina, con una imagen de fondo y al pie de la pagina las redes sociales con un enlace a cada una*/
+h1{
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: brown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100px;
+    text-decoration:underline;
+}
+body{
+    background: fixed;
+    background-image: url(fondo-espacial-cosmos-noche-estrellada-realista-estrellas-brillantes-via-lactea-galaxia-color-polvo-estrellas.jpg);
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.logo {
+  width: 600px; /* Ancho del logo */
+  height: auto; /* Altura ajustada automáticamente */
+  float: left; /* Alineación a la izquierda */
+}
+
+.gif {
+  width: 600px; /* Mismo ancho que el logo */
+  height: auto; /* Altura ajustada automáticamente */
+  float: right; /* Alineación a la derecha */
+  margin-top: 20px; /* Ajuste de margen superior para alinear verticalmente */
+}
+.container{
+  width: 100%;
+  height:500px;
+  position: relative;
+}
+iframe{
+  width: 300px;
+  height: 300px;
+  justify-content: right;
+}
+.n{
+    right: 0;
+    bottom: 0;
+    position:absolute; /* si no le pongo posicion se pone static por defecto y no se me mueve del sitio*/
+}
+  .progress { /*barra de carga descargada de internet*/
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 40px;
+    width: 500px;
+    background-color: brown;
+    margin-left: 712px;
+  }
+  .progress-value {/*barra de carga descargada de internet*/
+    animation: load 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+  }
+  @keyframes load {/*barra de carga descargada de internet*/
+    0% { width: 0; }
+    100% { width: 68%; }
+  }
+  iframe{
+    border-radius: 50%;
+    width: 80px;
+    height: 60px;
+    margin-left: 200px;
+    margin-top: 300px;
+  }
+  video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+ 
+  }
+  .copyright{
+    color: white;
+    bottom: 0;
+    text-align: center;
+}

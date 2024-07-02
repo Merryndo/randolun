@@ -1,0 +1,371 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    text-decoration: none;
+}
+/* Contenedor principal */
+.contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+   flex-direction: column;
+}
+/*efecto de la tarjeta presentacion*/
+.tarjeta{
+    position: relative;
+    width: 500px;
+    height: 350px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 200px;
+}
+.tarjeta .cara{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+.tarjeta .alante{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px ;
+  
+}
+.tarjeta .alante img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.tarjeta .atras{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+.tarjeta .atras p{
+    letter-spacing: 1px;
+}
+.tarjeta:hover .alante{
+    transform: perspective(600px) rotateY(180deg);
+}
+.tarjeta:hover .atras{
+    transform: perspective(600px) rotateY(360deg);
+}
+/*el efecto de la tarjeta termina aqui*/
+/*Video de fondo*/
+#vidbg{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;   
+    width: 100%;
+    
+}
+/*aqui empieza la animacion del logo*/
+.avatar {
+   
+    margin-top: 20px;
+    
+    transform: translateY(0px);
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px); /* Mueve el elemento hacia arriba */
+    }
+    100% {
+        transform: translateY(0px); /* Vuelve a la posición inicial */
+    }
+  }
+  /*aqui termina la animacion del logo*/
+img{
+    z-index: 1;
+    width: 250px;
+    height: 200px;
+    position: relative;
+    display:flex;
+    justify-content: center;
+}
+
+video{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    justify-content: center;
+}
+p{
+    padding-top: 30px;
+    height: 82px;
+    width: 470px;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 137px;
+    color: rgb(243, 192, 89);
+    border-radius: 20px;
+    font-family: Copperplate gothic;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+span{
+    bottom: 0px;
+    display: block;
+   position: relative;
+   margin-top: 50px;
+}
+span ul { /* todo esto es un boton que he copiado de internet es el boton*/
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+    bottom: 0px;
+}
+
+span ul li {/* todo esto es un boton que he copiado de internet*/
+    --c: goldenrod;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: auto;
+ 
+}
+span ul li span {/* todo esto es un boton que he copiado de internet*/
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: 1;
+    
+}
+
+span ul li:hover {/* todo esto es un boton que he copiado de internet*/
+    color: black;
+}
+
+span ul li:hover span {/* todo esto es un boton que he copiado de internet*/
+    transform: translateY(0) scale(2);
+}
+
+span ul li span:nth-child(1) {/* todo esto es un boton que he copiado de internet*/
+    --n: 1;
+}
+span ul li span:nth-child(2) {/* todo esto es un boton que he copiado de internet*/
+    --n: 2;
+}
+
+span ul li span:nth-child(3) {/* todo esto es un boton que he copiado de internet*/
+    --n: 3;
+}
+
+span ul li span:nth-child(4) {/* todo esto es un boton que he copiado de internet*/
+    --n: 4;
+}
+
+a{
+   text-decoration: none;
+}
+
+.copyright{
+    color: white;
+    bottom: 0;
+    text-align: center;
+}
+/*aqui empieza la nave espacial*/
+.nave{
+    position: relative;
+    left: 50%;
+    bottom: 0;
+  }
+  .capsula{
+    position: absolute;
+    z-index: 30;
+    background: #F3F3F3;
+    /*left: 0px;*/
+    margin-top:29px;
+    top: 0px;
+    width: 60px;
+    height: 50px;
+    opacity: 1;
+    overflow: hidden;
+    right: 30px;
+  }
+  .ventana{
+    border-radius: 50%;
+    background: #404040;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    /*left: 25%;*/
+    top: 20%;
+    border: 5px solid #0b1f65;
+    right: -15%;
+  }
+  .ala:after{
+    content: '';
+    position: absolute;
+    z-index: 10;
+    height: 40px;
+    width: 0px;
+    /*left: -8px;*/
+    right: 91px;
+    top:35px;
+    padding: 0px;
+    transform:  skew(5deg);
+    border-top: 10px solid transparent;
+    border-right: 10px solid #0b1f65;
+    border-bottom: 10px solid transparent;
+  }
+  .ala:before{
+    content: '';
+    position: absolute;
+    z-index: 10;
+    height: 40px;
+    width: 0px;
+    /*left: 58px;*/
+    right: 19px;
+    top:35px;
+    padding: 0px;
+    transform:  skew(-5deg);
+    border-top: 10px solid transparent;
+    border-left: 10px solid #0b1f65;
+    border-bottom: 10px solid transparent;
+  }
+  .base{
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    background: #0b1f65;
+    top: 80px;
+    /*left: 10px;*/
+    right: 40px;
+    z-index: 2;
+  }
+  .fuego{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 80px;
+    transform-origin: 50% 50%;
+    transform: rotate(-40deg) skew(1deg, -11deg);
+    z-index: 1;
+    /*left: 20px;*/
+    right: 45px;
+    background: linear-gradient(135deg, #EF8B32 0%, #EF8B32 50%, #E82134 50%, #E82134 100%);
+    animation-name: fuego;
+    animation-duration: .1s;
+    animation-iteration-count: infinite;
+  }
+  /*fin nave*/
+  @keyframes fuego{
+    0% {
+      transform: translate(0, 10px) scale(1, 1) rotate(-33deg) skew(0deg, -30deg);
+    }
+    100% {
+      transform: translate(0, 0px) scale(1, 1.4) rotate(-33deg) skew(0deg, -30deg);
+    }
+  }
+  .btn:active{
+    transform: scale(.9) ;
+  }
+  .buttons{
+    margin-top: 50px;
+  }
+  .tri{
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    padding: 0px;
+    /*left: 0;*/
+    right: 30px;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #F3F3F3;
+  }
+  /*aqui termina la navce espacial*/
+/*ocultar nave en dispositivos mvl*/
+@media (max-width: 768px) {
+  .esconder {
+    display: none;
+  
+  }
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+  .esconder {
+    display: none;
+  }
+}
+/*hacer la pag responsive*/
+@media only screen and (max-width: 1200px) {
+  /* Estilos para pantalla grande */
+  .contenedor {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  /* Estilos para pantalla mediana */
+  .contenedor {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Estilos para pantalla pequeña */
+  .contenedor {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Estilos para pantalla muy pequeña */
+  .contenedor {
+    width: 60%;
+  }
+}

@@ -1,0 +1,87 @@
+   /* Video de fondo */
+   video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+  
+  /* Letra para títulos */
+  @font-face {
+    font-family: "Designer";
+    src: url("DESIGNER.otf");
+  }
+  
+  button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+  img {
+    width: 200px;
+    height: 150px;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding-top: 10px;
+  }
+  /*aqui empieza la animacion del logo*/
+.avatar {
+    margin-top: 20px;
+    transform: translateY(0px);
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px); /* Mueve el elemento hacia arriba */
+    }
+    100% {
+        transform: translateY(0px); /* Vuelve a la posición inicial */
+    }
+  }
+  /*aqui termina la animacion del logo*/
+
+.copyright{
+    color: white;
+    bottom: 0;
+    text-align: center;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 400px;
+  color: white;
+}
+
+.card h1, .card h2 {
+  color: white;
+  font-family: "Designer";
+}
+
+.card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.card li {
+  margin: 10px 0;
+}
