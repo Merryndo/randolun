@@ -1,0 +1,32 @@
+Título: Página Web Interactiva con Tarjeta, Cohete y Sistema Solar
+
+Descripción:
+
+Esta página web interactiva combina una tarjeta interactiva, un cohete espacial animado y un botón que te lleva a una página del sistema solar. En la página del sistema solar, los planetas se agrandan a escala cuando pasas el ratón por encima, suena la banda sonora de Star Wars y hay una pequeña nave que puedes controlar con las flechas del teclado. Al clicar en cada planeta, se abre otra página que explica sus características.
+
+Características:
+
+Tarjeta interactiva con efectos visuales
+Cohete espacial animado con control de animación mediante JavaScript
+Botón que te lleva a la página del sistema solar
+Planetas que se agrandan a escala al pasar el ratón por encima
+Banda sonora de Star Wars
+Nave controlable con las flechas del teclado
+Páginas individuales para cada planeta con información detallada
+Cómo usar:
+
+Clona o descarga el repositorio en tu computadora.
+Abre el archivo index.html en un navegador para ver la página web en acción.
+Interactúa con la tarjeta y el cohete en la página principal.
+Haz clic en el botón para ir a la página del sistema solar.
+Pasa el ratón por encima de los planetas para verlos agrandarse a escala.
+Controla la nave con las flechas del teclado.
+Haz clic en cada planeta para abrir una página con información detallada.
+Código:
+
+Créditos:
+
+Emilio Hernandez por la animación del cohete.
+Licencia:
+
+Este proyecto está bajo la licencia MIT. Puedes utilizar y modificar el código para tus propios proyectos, siempre y cuando incluyas el crédito correspondiente.
